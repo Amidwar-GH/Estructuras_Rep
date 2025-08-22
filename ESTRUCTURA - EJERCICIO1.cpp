@@ -25,6 +25,7 @@ int main(){
 	cin.getline(c1.nombre,20,'\n');
 	cout<<"Edad: ";
 	cin>>c1.edad;
+	fflush(stdin);
 	cout<<"Sexo: ";
 	cin.getline(c1.sexo,10,'\n');
 	cout<<"Club: ";
@@ -45,7 +46,7 @@ int main(){
 	cout<<"Edad: "<<c1.edad<<endl;
 	cout<<"Sexo: "<<c1.sexo<<endl;
 	cout<<"Club: "<<c1.club<<endl;
-	cout<<"Categoria"<<categoria<<endl;
+	cout<<"Categoria: "<<categoria<<endl;
 	
 	return 0;
 }
