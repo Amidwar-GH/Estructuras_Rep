@@ -41,6 +41,7 @@ int main(){
 		cout<<"Ciudad: "<<empleados[i].dir_empleado.ciudad<<endl;
 		cout<<"Provincia: "<<empleados[i].dir_empleado.provincia<<endl;
 		cout<<"Salario: "<<empleados[i].salario<<endl;
+		cout<<"_________________________\n";
 	}
 	
 	return 0;
