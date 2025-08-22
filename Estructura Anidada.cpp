@@ -19,6 +19,7 @@ struct empleado{
 int main(){
 	
 	for(int i=0; i<2; i++){
+		fflush(stdin); //Vciar el buffer y permitir digitar los valores
 		cout<<"Digite su nombre: ";
 		cin.getline(empleados[i].nombre,20,'\n');
 		cout<<"Digite su direccion: ";
