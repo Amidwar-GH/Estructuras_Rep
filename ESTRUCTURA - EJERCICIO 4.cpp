@@ -39,13 +39,16 @@ int main(){
 			medallasM=atletas[i].numero_medallas;
 			posM=i;
 		}
-		if(atletas[i].numero_medallas<medallasm){
+		/*if(atletas[i].numero_medallas<medallasm){
 			medallasm = atletas[i].numero_medallas;
 			posm=i;
-		}
+		}*/
 		
 	}
 	
+	cout<<"\n.:Datos del atleta con mayor numero de medallas:.\n";
+	cout<<"Nombre: "<<atletas[posM].nombre<<endl;
+	cout<<"Pais: "<<atletas[posM].pais;
 	
 	return 0;
 }
