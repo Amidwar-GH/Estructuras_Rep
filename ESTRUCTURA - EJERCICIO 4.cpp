@@ -16,6 +16,10 @@ struct Atleta{
 
 int main(){
 	
+	
+	int medallasM=0, medallasm=9999999;
+	int posM, posm;
+	
 	int numero_de_atletas;
 	cout<<"Digite la cantidad de atletas: ";
 	cin>>numero_de_atletas;
@@ -28,6 +32,18 @@ int main(){
 		cin.getline(atletas[i].pais,20,'\n');
 		cout<<i+1<<". Digite el numero de medallas del atleta: ";
 		cin>>atletas[i].numero_medallas;
+		cout<<"\n";
+		
+		
+		if(atletas[i].numero_medallas>medallasM){
+			medallasM=atletas[i].numero_medallas;
+			posM=i;
+		}
+		if(atletas[i].numero_medallas<medallasm){
+			medallasm = atletas[i].numero_medallas;
+			posm=i;
+		}
+		
 	}
 	
 	
