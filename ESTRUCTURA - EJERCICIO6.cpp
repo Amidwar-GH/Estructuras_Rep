@@ -55,6 +55,7 @@ int main(){
 	}
 	
 	cout<<"\n::Datos del mejor promedio::\n";
+	cout<<"____________________________\n";
 	cout<<"Nombre: "<<alumnos[pos].nombre<<endl;
 	cout<<"Edad: "<<alumnos[pos].edad<<endl;
 	cout<<"Sexo: "<<alumnos[pos].sexo<<endl;
