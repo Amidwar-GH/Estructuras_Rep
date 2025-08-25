@@ -13,12 +13,35 @@ using namespace std;
 struct Persona{
 	char nombre[20];
 	bool discapacidad;
-};
+}personas[100], P_SD[100], P_CD[100];
+
 
 int main(){
 	
+	int n_personas;
+	int contador_CD=0, contador_SD=0;
 	
+	cout<<"Digite el numero de personas: "; cin>>n_personas;
 	
+	for(int i=0; i<n_personas; i++){
+		fflush(stdin);
+		cout<<"Nombre: ";
+		cin.getline(personas[i].nombre,20,'\n');
+		cout<<"Discapacidad: ";
+		cin>>personas[i].discapacidad;
+		cout<<"\n";
+	}
+	
+	for(int i=0; i<n_personas; i++){
+		if(personas[i].discapacidad == 1){
+			P_CD[contador_CD] = personas[i];
+			contador_CD++;
+		}
+		if(personas[i].discapacidad == 0){
+			P_SD[contador_SD] = personas[i];
+			contador_SD++;
+		}
+	}
 	
 	
 	
