@@ -21,8 +21,8 @@ struct Producto{
 
 int main(){
 	float CARO=0, BARATO=999999;
-	int n_productos;
-	cout<<"Digite cuantos productos son: ";
+	int n_productos,opcion;
+	cout<<"Digite cuantos productos son: \n";
 	cin>>n_productos;
 	
 	for(int i=0; i<n_productos; i++){
@@ -36,24 +36,49 @@ int main(){
 		cout<<endl;
 	}
 	
-	for(int i=0; i<n_productos; i++){
-		cout<<"Nombre: "<<productos[i].nombre<<endl;
-		cout<<"Precio: "<<productos[i].precio<<endl;
-		cout<<"Stock: "<<productos[i].stock<<endl;
-	}
+	cout<<"Elija una opcion: \n";
+	cout<<"1. Ver los productos\n";
+	cout<<"2. Ver el producto mas caro y mas barato\n";
+	cout<<"3. Ver productos a reponer\n";
+	cin>>opcion;
 	
-	for(int i=0; i<n_productos; i++){
-		if(productos[i].precio>CARO){
-			CARO = productos[i].precio;
-		}
-		if(productos[i].precio<BARATO){
-			BARATO = productos[i].precio;
-		}
+	switch(opcion){
+		case 1:
+			for(int i=0; i<n_productos; i++){
+				cout<<"Nombre: "<<productos[i].nombre<<endl;
+				cout<<"Precio: "<<productos[i].precio<<endl;
+				cout<<"Stock: "<<productos[i].stock<<endl;
+			}
+		break;
+		
+		case 2:
+			for(int i=0; i<n_productos; i++){
+				if(productos[i].precio>CARO){
+					CARO = productos[i].precio;
+				}
+				if(productos[i].precio<BARATO){
+					BARATO = productos[i].precio;
+				}
+			}
+			cout<<"\n.:PRODUCTO MAS CARO:.\n";
+			cout<<CARO;
+			cout<<"\n.:PRODUCTO MAS BARATO:.\n";
+			cout<<BARATO;
+		break;
+		
+		case 3:
+			cout<<"\n.:PRODUCTOS A REPONER:.\n";
+			for(int i=0; i<n_productos; i++){
+				if(productos[i].stock<5){
+					cout<<"- "<<productos[i].nombre<<" || Stock: "<<productos[i].stock<<endl;
+				}
+			}
+		break;
+		
+		default: "Opcion invalida;";
+			
 	}
-	cout<<"\n.:PRODUCTO MAS CARO:.\n";
-	cout<<CARO;
-	cout<<"\n.:PRODUCTO MAS BARATO:.\n";
-	cout<<BARATO;
+
 	
 	return 0;
 }
