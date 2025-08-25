@@ -44,6 +44,18 @@ int main(){
 	}
 	
 	
+	cout<<"\n.:Personas sin discapacidad:.\n";
+	for(int i=0; i<contador_SD; i++){
+		cout<<"- "<<P_SD[i].nombre<<endl;
+	}
+	
+	cout<<endl;
+	
+	cout<<"\n.:Personas con discapacidad:.\n";
+	for(int i=0; i<contador_CD; i++){
+		cout<<"- "<<P_CD[i].nombre<<endl;
+	}
+	
 	
 	return 0;
 }
